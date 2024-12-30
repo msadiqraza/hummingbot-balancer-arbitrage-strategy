@@ -1,0 +1,34 @@
+#############################################
+###   Pool Arbitrage Strategy Config   ###
+#############################################
+
+template_version: 1  # You can increment this version as you make changes
+
+strategy: null  # Assuming your strategy's Python file is named pool_arb.py
+
+# Connector and Market Parameters
+connector: null
+trading_pair: null
+
+# Order amount in base currency
+order_amount: null
+
+# Buffer to adjust order price for slippage.
+# This is important for AMMs where transactions can take longer.
+# The submitted order price will be adjusted higher (by percentage value) for buy orders
+# and lower for sell orders. (Enter 1 for 1%)
+slippage_buffer: null
+
+# Minimum profitability target required to place an order.
+# Expressed in percentage value, e.g., 1 = 1% target profit.
+min_profitability: null
+
+# # How often to check for arbitrage opportunities (in seconds)
+# task_cooldown: 10
+
+# # The fixed rate (e.g., from an API or calculation) used for comparison with the DEX price.
+# api_price: null
+
+# A flag (true/false) to enable a debug price shim for integration tests.
+# Keep this disabled unless you are developing or testing.
+debug_price_shim: false
